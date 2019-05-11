@@ -1,0 +1,299 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>Presentation</title>
+
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/serif.css">
+
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+
+    <!-- stylesheet for heading overview plugin -->
+    <link rel="stylesheet" href="extCss/heading.css">
+
+    <!-- Printing and PDF exports -->
+    <script>
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+        document.getElementsByTagName('head')[0].appendChild(link);
+    </script>
+
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+        google.charts.load('current', {'packages':['corechart']});
+        google.charts.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+
+            var data = google.visualization.arrayToDataTable([
+                ['Task', 'Hours per Day'],
+                ['Roman Catholic',     81],
+                ['Other Christians',      3.3],
+                ['no religion',  6.8],
+                ['undeclared or other', 8.9]
+            ]);
+
+            var options = {
+                title: '',
+                pieSliceText: 'none',
+                backgroundColor: "transparent",
+                legend: {
+                    position: 'labeled'
+                },
+            };
+
+            var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
+            chart.draw(data, options);
+        }
+    </script>
+
+</head>
+<body>
+<div class="reveal">
+    <div class="slides">
+        <section class="no-heading-overview" data-timing="30">
+            <h1>Portugal</h1>
+            <h3>The cultural things (changeme)</h3>
+            <small>by Leonhard Gahr</small>
+        </section>
+        <section class="no-heading-overview table-of-contents" data-heading-tag="h2"
+                 data-heading="Table of contents" data-timing="30"></section>
+        <section data-timing="240">
+            <section class="center">
+                <h2 class="heading-overview">General facts</h2>
+                <small>statistics not to remember</small>
+            </section>
+            <section data-background-image="http://flagpedia.net/data/flags/ultra/pt.png" class="no-heading-overview">
+
+            </section>
+            <section>
+                <h3>Statistics</h3>
+                <table>
+                    <tr>
+                        <th>Official name</th>
+                        <td>República Portuguesa</td>
+                    </tr>
+                    <tr>
+                        <th>Official language</th>
+                        <td>Portuguese (<a href="https://www.youtube.com/watch?v=_y-l9C7vzbk&t=7s" target="_blank">audition</a>)</td>
+                    </tr>
+                    <tr>
+                        <th>Area</th>
+                        <td>92,212 km²</td>
+                    </tr>
+                    <tr>
+                        <th>Population</th>
+                        <td>10,291,027 <a style="color: #ff2c2d;">-0.3%</a></td>
+                    </tr>
+                    <tr>
+                        <th>Ethnicity</th>
+                        <td>96.3% Portuguese</td>
+                    </tr>
+                </table>
+
+                <aside class="notes">
+                    <table>
+                        <tr>
+                            <th>funfact 1:</th>
+                            <td>Portugal is 97% Water (ocean)</td>
+                        </tr>
+                        <tr>
+                            <th>fun fact 2:</th>
+                            <td>not changed borders since 1139</td>
+                        </tr>
+                        <tr>
+                            <th>EEC accession</th>
+                            <td>1986 1st January</td>
+                        </tr>
+                    </table>
+                </aside>
+            </section>
+
+            <section>
+                <h3>Religion</h3>
+                <div id="piechart" style="width: 900px; height: 500px;"></div>
+            </section>
+        </section>
+        <section>
+            <section class="center">
+                <h2 class="heading-overview">Main cultural aspects</h2>
+                <small>What do we do?</small>
+            </section>
+        </section>
+        <section>
+            <section class="center">
+                <h2 class="heading-overview">The models</h2>
+                <small>What do we do?</small>
+            </section>
+        </section>
+        <section>
+            <section class="center">
+                <h2 class="heading-overview">My own view</h2>
+                <small>What do we do?</small>
+            </section>
+        </section>
+        <section>
+            <h2>Thank you for your attention!</h2>
+            <small>Do you have questions?</small>
+        </section>
+    </div>
+</div>
+
+<script src="lib/js/head.min.js"></script>
+<script src="js/reveal.js"></script>
+
+<script>
+    Reveal.initialize({
+        // Display controls in the bottom right corner
+        controls: false,
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Set default timing of 2 minutes per slide
+        defaultTiming: 120,
+
+        // Display the page number of the current slide
+        slideNumber: true,
+
+        // Push each slide change to the browser history
+        history: true,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Vertical centering of slides
+        center: true,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autolaying embedded media (video/audio/iframe)
+        // - null: Media will only autoplay if data-autoplay is present
+        // - true: All media will autoplay, regardless of individual setting
+        // - false: No media will autoplay, regardless of individual setting
+        autoPlayMedia: true,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: Reveal.navigateNext,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // Hides the address bar on mobile devices
+        hideAddressBar: true,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style
+        transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+        // Transition speed
+        transitionSpeed: 'default', // default/fast/slow
+
+        // Transition style for full page slide backgrounds
+        backgroundTransition: 'fade', // none/fade/slide/convex/concave/zoom
+
+        // Number of slides away from the current that are visible
+        viewDistance: 5,
+
+        // Parallax background image
+        parallaxBackgroundImage: '', // e.g. "'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg'"
+
+        // Parallax background size
+        parallaxBackgroundSize: '', // CSS syntax, e.g. "2100px 900px"
+
+        // Number of pixels to move the parallax background per slide
+        // - Calculated automatically unless specified
+        // - Set to 0 to disable movement along an axis
+        parallaxBackgroundHorizontal: null,
+        parallaxBackgroundVertical: null,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        dependencies: [
+            // Cross-browser shim that fully implements classList - https://github.com/eligrey/classList.js/
+            {
+                src: 'lib/js/classList.js', condition: function () {
+                    return !document.body.classList;
+                }
+            },
+
+            // Interpret Markdown in <section> elements
+            {
+                src: 'plugin/markdown/marked.js', condition: function () {
+                    return !!document.querySelector('[data-markdown]');
+                }
+            },
+            {
+                src: 'plugin/markdown/markdown.js', condition: function () {
+                    return !!document.querySelector('[data-markdown]');
+                }
+            },
+
+            // Syntax highlight for <code> elements
+            {
+                src: 'plugin/highlight/highlight.js', async: true, callback: function () {
+                    hljs.initHighlightingOnLoad();
+                }
+            },
+
+            // Zoom in and out with Alt+click
+            {src: 'plugin/zoom-js/zoom.js', async: true},
+
+            // Speaker notes
+            {src: 'plugin/notes/notes.js', async: true},
+
+            // MathJax
+            {src: 'plugin/math/math.js', async: true},
+
+            // heading overview
+            {src: 'extPlugin/heading-overview.js', async: true}
+        ]
+    });
+</script>
+</body>
+</html>

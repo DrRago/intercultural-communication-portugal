@@ -1,0 +1,35 @@
+.topics {
+    position: fixed;
+    margin-top: 93vh !important;
+    left: 50%;
+    transform: translate(-50%, 0);
+    text-align: center;
+    z-index: 9999;
+    width: 100%;
+    transition: visibility 0s, opacity .5s linear;
+    font-size: 30px !important;
+}
+.head h4 {
+    color: gray;
+    display: inline;
+}
+.head .active {
+    color: #000;
+    -webkit-transition: color 2s;
+    -moz-transition: color 2s;
+    -ms-transition: color 2s;
+    -o-transition: color 2s;
+    transition: color 2s
+}
+.head .inactive {
+    color: gray;
+    -webkit-transition: color 2s;
+    -moz-transition: color 2s;
+    -ms-transition: color 2s;
+    -o-transition: color 2s;
+    transition: color 2s
+}
+
+table tr td:first-child {
+    white-space: nowrap;
+}
