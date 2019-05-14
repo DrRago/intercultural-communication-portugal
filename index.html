@@ -26,16 +26,16 @@
 
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript">
-        google.charts.load('current', {'packages':['corechart']});
-        google.charts.setOnLoadCallback(drawChart);
+        google.charts.load('current', {'packages': ['corechart']});
+        google.charts.setOnLoadCallback(drawCharts);
 
-        function drawChart() {
+        function drawCharts() {
 
             var data = google.visualization.arrayToDataTable([
                 ['Task', 'Hours per Day'],
-                ['Roman Catholic',     81],
-                ['Other Christians',      3.3],
-                ['no religion',  6.8],
+                ['Roman Catholic', 81],
+                ['Other Christians', 3.3],
+                ['no religion', 6.8],
                 ['undeclared or other', 8.9]
             ]);
 
@@ -51,16 +51,34 @@
             var chart = new google.visualization.PieChart(document.getElementById('piechart'));
 
             chart.draw(data, options);
+
+            // Define the chart to be drawn.
+            var data_hof = google.visualization.arrayToDataTable([
+                ['Value', 'Germany', 'Portugal'],
+                ['PDI', 35, 63],
+                ['IDV', 67, 27],
+                ['MAS', 65, 99],
+                ['UAI', 66, 31],
+                ['LTO', 83, 28],
+                ['IND', 40, 33]
+            ]);
+
+            var options_hof = {
+                backgroundColor: "transparent"
+            };
+
+            // Instantiate and draw the chart.
+            var chart_hof = new google.visualization.ColumnChart(document.getElementById('hofstede'));
+            chart_hof.draw(data_hof, options_hof);
         }
     </script>
-
 </head>
 <body>
 <div class="reveal">
     <div class="slides">
         <section class="no-heading-overview" data-timing="30">
             <h1>Portugal</h1>
-            <h3>The cultural things (changeme)</h3>
+            <h3>and their today's culture</h3>
             <small>by Leonhard Gahr</small>
         </section>
         <section class="no-heading-overview table-of-contents" data-heading-tag="h2"
@@ -71,8 +89,25 @@
                 <small>statistics not to remember</small>
             </section>
             <section data-background-image="http://flagpedia.net/data/flags/ultra/pt.png" class="no-heading-overview">
-
+                <aside class="notes">
+                    <h3>anthem</h3>
+                    <b>A Portuguesa</b>
+                    <ul>
+                        <li>first verse: Heroes of the sea, noble people</li>
+                        <li>is about war</li>
+                        <li>patriotism</li>
+                        <li>their strong navy (history)</li>
+                    </ul>
+                </aside>
             </section>
+
+            <section>
+                <h2>Location</h2>
+                <iframe width="900" height="500" id="gmap_canvas"
+                        src="https://maps.google.com/maps?q=Protugal&t=&z=5&ie=UTF8&iwloc=&output=embed" frameborder="0"
+                        scrolling="no" marginheight="0" marginwidth="0"></iframe>
+            </section>
+
             <section>
                 <h3>Statistics</h3>
                 <table>
@@ -82,7 +117,8 @@
                     </tr>
                     <tr>
                         <th>Official language</th>
-                        <td>Portuguese (<a href="https://www.youtube.com/watch?v=_y-l9C7vzbk&t=7s" target="_blank">audition</a>)</td>
+                        <td>Portuguese (<a href="https://www.youtube.com/watch?v=_y-l9C7vzbk&t=7s" target="_blank">audition</a>)
+                        </td>
                     </tr>
                     <tr>
                         <th>Area</th>
@@ -102,7 +138,7 @@
                     <table>
                         <tr>
                             <th>funfact 1:</th>
-                            <td>Portugal is 97% Water (ocean)</td>
+                            <td>Portugal is 97% Water (ocean) -> jellyfish</td>
                         </tr>
                         <tr>
                             <th>fun fact 2:</th>
@@ -113,6 +149,12 @@
                             <td>1986 1st January</td>
                         </tr>
                     </table>
+                    <ul>
+                        <li>Germany</li>
+                        <li>357,386 km²</li>
+                        <li>80.8% Germans</li>
+                        <li>83,000,000 +0.4%</li>
+                    </ul>
                 </aside>
             </section>
 
@@ -124,24 +166,307 @@
         <section>
             <section class="center">
                 <h2 class="heading-overview">Main cultural aspects</h2>
-                <small>What do we do?</small>
+                <small>What does Portugal have to offer?</small>
+            </section>
+            <section>
+                <h3>Art</h3>
+                <img class="fragment" data-fragment-index="1"
+                     src="https://www.mkgallery.org/media/images/Rego_fl_Angel_1998.width-1500.jpg" height="400">
+                <img class="fragment" data-fragment-index="1"
+                     src="http://ajuntament.barcelona.cat/lavirreina/sites/default/files/2017-08/header-The-Pillow-Man_Centre-Panel_ok.jpg"
+                     height="400">
+                <aside class="notes">
+                    <ul>
+                        <li>influenced by Flemish paintings 15th century</li>
+                        <li>italy and france in the 18th century</li>
+                    </ul>
+                    <b>Paula Rego (84)</b>
+                    <ul>
+                        <li> became famous in 1990s</li>
+
+                        <li>most famous living portuguese artist</li>
+                        <li>her work is about portuguese culture and feminism
+                            <ul>
+                                <li>Left: Paula Rego’s Angel</li>
+                                <li>Right: Family Sayings</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </aside>
+            </section>
+
+            <section>
+                <h3>Music</h3>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/0/01/Jose_malhoa_fado.jpg" height="500">
+                <aside class="notes">
+                    <ul>
+                        <li>Painting: Fado (1910)</li>
+                        <li>developed fully in Portugal (no outer influences)</li>
+                    </ul>
+                </aside>
+            </section>
+            <section>
+                <h3>Fado</h3>
+                <ul>
+                    <li class="fragment">Destiny, Fate</li>
+                    <li class="fragment">originated in 1820s</li>
+                    <li class="fragment">melancholic</li>
+                    <li class="fragment">nature expression</li>
+                </ul>
+
+                <aside class="notes">
+                    <ul>
+                        <li>“destiny”, “fate”</li>
+                        <li>considered the soul of portuguese music</li>
+                        <li>played and performed in pubs, cafés and restaurants</li>
+                        <li>originated in 1820s, but probably much older</li>
+                        <li>expresses nature</li>
+                        <li>melancholic</li>
+                    </ul>
+                </aside>
+            </section>
+
+            <section>
+                <h3>Literature</h3>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/9/97/Imagem158_Gil_Vicente%2C_escrevendo._Sepia.jpg"
+                     height="400">
+                <img src="http://thescriptroad.org/wp-content/uploads/2019/03/Jose-Luis-Peixoto-photo-by-Patricia-Santos-Pinto-e1552187936900.jpg"
+                     height="400"/>
+
+                <aside class="notes">
+                    <ul class="part" data-startline="67" data-endline="79">
+                        <li class="" data-startline="67" data-endline="73">Gil Vicente
+                            <ul>
+                                <li class="" data-startline="68" data-endline="69">Father of Portuguese drama
+                                    <ul>
+                                        <li class="" data-startline="69" data-endline="69">drama in Portugal is not that
+                                            significant
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="" data-startline="70" data-endline="70">entertained royalty arroung 15th
+                                    century
+                                </li>
+                                <li class="" data-startline="71" data-endline="71">spanish writer as well</li>
+                                <li class="" data-startline="72" data-endline="73">wrote about life and changes in it
+                                    <ul>
+                                        <li class="" data-startline="73" data-endline="73">mostly medieval to
+                                            renaissance changes
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="" data-startline="74" data-endline="79">José Luís Peixoto (44) - top novelists today
+                            in Portugal
+                            <ul>
+                                <li>The Piano Cemetery
+                                    <ul>
+                                        <li class="" data-startline="76" data-endline="76">about a carpenter family
+                                            who’d rather be piano makers
+                                        </li>
+                                        <li class="" data-startline="77" data-endline="77">“A story of sex and
+                                            treachery, of ambition and frustration[…]" - review by unknown
+                                        </li>
+
+                                    </ul>
+                                </li>
+                                <li class="" data-startline="78" data-endline="79">melancholic</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </aside>
+            </section>
+
+            <section>
+                <h3>Sport</h3>
+                <img class="fragment"
+                     src="https://upload.wikimedia.org/wikipedia/en/thumb/4/40/Boavista_F.C._logo.svg/250px-Boavista_F.C._logo.svg.png">
+                <img class="fragment" height="260"
+                     src="data:image/jpeg;base64,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">
+                <img class="fragment"
+                     src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Cristiano_Ronaldo_2018.jpg/220px-Cristiano_Ronaldo_2018.jpg"
+                     height="260">
+
+                <aside class="notes">
+                    <ul>
+                        <li>National team is the third best team in the world in 2017</li>
+                        <li>first footbal club: Boavista (1903)</li>
+                        <li>Eusébio da Silva Ferreira (RIP 2014)
+                            <ul>
+                                <li>one of the greatest football players of all time</li>
+                                <li>733 goals in 745 Games</li>
+                            </ul>
+                        </li>
+                        <li>Cristiano Ronaldo</li>
+                    </ul>
+                </aside>
+            </section>
+
+            <section data-transition="slide-in fade-out">
+                <h3>Architecture</h3>
+
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Mafra_May_2013-2.jpg/800px-Mafra_May_2013-2.jpg"
+                     height="500">
+
+                <aside class="notes">
+                    <b>Baroque Architecture (Mafra National Palace)</b>
+                    <ul>
+                        <li>developed over time mainly without impressions from outside</li>
+                        <li>one of the best Architecture schools “Escola do Porto”</li>
+                        <li>Most modern Faculdade de Arquitectura</li>
+                    </ul>
+                </aside>
+            </section>
+            <section data-transition="fade">
+                <h3>Architecture</h3>
+
+                <img src="https://www.e-architect.co.uk/images/jpgs/portugal/judical_court_gouveia_b160611_jc2.jpg"
+                     height="500">
+
+                <aside class="notes">
+                    <b>Modern - some palacio</b>
+                    <ul>
+                        <li>developed over time mainly without impressions from outside</li>
+                        <li>one of the best Architecture schools “Escola do Porto”</li>
+                        <li>Most modern Faculdade de Arquitectura</li>
+                    </ul>
+                </aside>
+            </section>
+            <section data-transition="fade">
+                <h3>Architecture</h3>
+
+                <img src="https://pullcast.eu/blog/wp-content/uploads/2018/06/op_15331_al_a_maat_lisbon_visit_1_hufton_crow_044.jpg"
+                     height="500">
+
+                <aside class="notes">
+                    <b>Lisabon - MAAT (Muesum of Art, Architecture and Technology</b>
+                    <ul>
+                        <li>developed over time mainly without impressions from outside</li>
+                        <li>one of the best Architecture schools “Escola do Porto”</li>
+                        <li>Most modern Faculdade de Arquitectura</li>
+                    </ul>
+                </aside>
+            </section>
+            <section data-transition="fade-in slide-out">
+                <h3>Architecture</h3>
+
+                <img src="https://upload.wikimedia.org/wikipedia/commons/2/25/Pavilh%C3%A3o_de_Portugal_4.JPG"
+                     height="500">
+
+                <aside class="notes">
+                    <b>Pavilhão de Portugal - Museum Lisabon</b>
+                    <ul>
+                        <li>developed over time mainly without impressions from outside</li>
+                        <li>one of the best Architecture schools “Escola do Porto”</li>
+                        <li>Most modern Faculdade de Arquitectura</li>
+                    </ul>
+                </aside>
             </section>
         </section>
+
         <section>
             <section class="center">
                 <h2 class="heading-overview">The models</h2>
-                <small>What do we do?</small>
+                <small>Cultural Ranking</small>
+            </section>
+            <section>
+                <h3>Trompenaars</h3>
+                <ol>
+                    <li class="fragment"><a class="fragment highlight-blue">Universalism</a> vs. particularism</li>
+                    <li class="fragment">Individualism vs. <a class="fragment highlight-blue">communitarianism</a></li>
+                    <li class="fragment"><a class="fragment highlight-current-blue">Specific vs. diffuse</a></li>
+                    <li class="fragment"><a class="fragment highlight-blue">Neutral</a> vs emotional</li>
+                    <li class="fragment"><a class="fragment highlight-blue">Achievement</a> vs. ascription</li>
+                    <li class="fragment">Internal vs. <a class="fragment highlight-blue">external control</a></li>
+                    <li class="fragment">Sequential vs. <a class="fragment highlight-blue">synchronous time</a></li>
+                </ol>
+
+                <aside class="notes">
+                    <ol>
+                        <li>
+                            one of the most universalistic
+                            <ul>
+                                <li>laws are fixed</li>
+                            </ul>
+                        </li>
+                        <li>
+                            center, more communitarianistic (commonly think of themselves as we)
+                        </li>
+                        <li>center (business life and private life are equally important)</li>
+                        <li>center, but more neutral (show less emotions)</li>
+                        <li>center, but more achievement oriented (performance = status)</li>
+                        <li>definitely external controlled
+                            <ul>
+                                <li>guided by god</li>
+                                <li>work with their environment</li>
+                                <li>Be there for others, positively</li>
+                            </ul>
+                        </li>
+                        <li>no information, but since it’s high context: Synchronous (multitasking)
+                            <ul>
+                                <li>more of a present oriented culture</li>
+                            </ul>
+                        </li>
+                    </ol>
+                </aside>
+            </section>
+            <section>
+                <h3>Hofstede</h3>
+                <div id="hofstede" style="width: 900px; height: 500px;"></div>
+
+                <aside class="notes">
+                    <ul>
+                        <li>Power distance index (PDI)</li>
+                        <li>Individualism vs. collectivism (IDV)</li>
+                        <li>Uncertainty avoidance (UAI)</li>
+                        <li>Masculinity vs. femininity (MAS)</li>
+                        <li>Long-term orientation vs. short-term orientation (LTO)</li>
+                        <li>
+                            Indulgence vs. restraint (IND)
+                            <ul>
+                                <li>Germany and Portugal have same sight on the limitation of the gratification of
+                                    needs
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </aside>
+            </section>
+            <section>
+                <h3>Hall</h3>
+                <img class="fragment" height="250"
+                     src="http://teaching.monster.com/nfs/teaching/attachment_images/0008/4847/shutterstock_43156969_crop380w.jpg?1263222068">
+                <img class="fragment" height="250" src="https://i.imgflip.com/2hr8bd.jpg">
+                <aside class="notes">
+                    According to Hall
+                    <ul>
+                        <li>
+                            High context
+                            <ul>
+                                <li>Polychronic</li>
+                                <li>Low territoriality</li>
+                            </ul>
+                        </li>
+                        <li>"more relaxed"</li>
+                    </ul>
+                </aside>
             </section>
         </section>
+
         <section>
             <section class="center">
-                <h2 class="heading-overview">My own view</h2>
-                <small>What do we do?</small>
+                <h2 class="heading-overview">My personal view</h2>
+                <small>What is my connection to Portugal?</small>
             </section>
         </section>
-        <section>
+        <section class="no-heading-overview">
             <h2>Thank you for your attention!</h2>
             <small>Do you have questions?</small>
+        </section>
+        <section class="no-heading-overview">
+            <h3>The Lewis Model</h3>
+            <img style="border: none;" src="img/lewis-model.png" height="500">
         </section>
     </div>
 </div>
